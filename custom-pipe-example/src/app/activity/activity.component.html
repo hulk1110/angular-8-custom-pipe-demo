@@ -25,7 +25,13 @@
       <tr *ngFor="let activity of activities">
         <td>{{activity.title}}</td>
         <td>{{activity.dueDate | date:date}}</td>
-        <td>{{activity.status}}</td>
+        <td>
+            <div [ngSwitch]='activity.status'>
+            <span *ngSwitchCase ="0">Not completed</span>
+            <span *ngSwitchCase ="1"> completed</span>
+            <span *ngSwitchDefault>Not Applicable</span>
+            </div>
+            </td>
       </tr>
       
     </tbody>
