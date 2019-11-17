@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Player List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+             
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Team</th>
+        <th>Date Of Birth</th>
+        <th>Number of Fours</th>
+        <th>Number of Sixes</th>
+        <th>Others</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of palyers">
+        <td>{{player.name}}</td>
+        <td>{{player.team}}</td>
+        <td>{{player.dob}}</td>
+        <td>{{player.noOf4}}</td>
+        <td>{{player.noOf6}}</td>
+        <td>{{player.others}}</td>
+        <td>{{player.dob | age}}</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
